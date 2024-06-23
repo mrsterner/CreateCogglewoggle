@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "create-cogglewoggle",
+  "id": "coggle",
   "version": "${version}",
-  "name": "Cogglewoggle",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Create: Coggle",
+  "description": "coggle",
   "authors": [
     "MrSterner!"
   ],
@@ -17,12 +17,18 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "dev.sterner.Cogglewoggle"
+        "value": "dev.sterner.coggle.Cogglewoggle"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "dev.sterner.coggle.Cogglewoggle"
       }
     ]
   },
   "mixins": [
-    "cogglewoggle.mixins.json"
+    "coggle.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",

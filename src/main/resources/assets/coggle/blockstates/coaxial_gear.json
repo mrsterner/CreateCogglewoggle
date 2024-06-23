@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "coggle:block/coaxial_gear",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "coggle:block/coaxial_gear"
+    },
+    "axis=z": {
+      "model": "coggle:block/coaxial_gear",
+      "x": 90,
+      "y": 180
+    }
+  }
+}
