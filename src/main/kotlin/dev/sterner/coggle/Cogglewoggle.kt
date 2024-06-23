@@ -1,10 +1,11 @@
 package dev.sterner.coggle
 
 import com.simibubi.create.foundation.data.CreateRegistrate
-import com.tterrag.registrate.util.entry.ItemProviderEntry
+import dev.sterner.coggle.client.ponder.CogglePonderIndex
 import dev.sterner.coggle.registry.CoggleBlockEntityTypes
 import dev.sterner.coggle.registry.CoggleBlocks
 import dev.sterner.coggle.registry.CoggleItems
+import dev.sterner.coggle.registry.CogglePonderTags
 import dev.sterner.coggle.util.CogglePartials
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.ModInitializer
@@ -15,10 +16,7 @@ import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.CreativeModeTab
-import net.minecraft.world.item.CreativeModeTab.DisplayItemsGenerator
-import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
 import net.minecraft.world.item.ItemStack
-import java.util.List
 
 
 object Cogglewoggle : ModInitializer, ClientModInitializer {
@@ -42,6 +40,8 @@ object Cogglewoggle : ModInitializer, ClientModInitializer {
 
     override fun onInitializeClient() {
         CogglePartials.init();
+        CogglePonderTags.register()
+        CogglePonderIndex.register()
     }
 
     fun asResource(s: String): ResourceLocation {

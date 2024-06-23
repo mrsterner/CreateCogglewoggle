@@ -2,7 +2,6 @@ package dev.sterner.coggle.util
 
 import com.jozufozu.flywheel.core.PartialModel
 import dev.sterner.coggle.Cogglewoggle
-import net.minecraft.resources.ResourceLocation
 
 object CogglePartials {
     //val AIR: PartialModel = PartialModel(ResourceLocation("minecraft", "block/air"))
@@ -21,6 +20,12 @@ object CogglePartials {
     val DIFFERENTIAL_INPUT_SHAFT: PartialModel = block("differential/input_shaft")
     val DIFFERENTIAL_CONTROL_SHAFT: PartialModel = block("differential/control_shaft")
 
+    // Double Cardan Shaft
+
+    val DCS_CENTER_SHAFT: PartialModel = block("double_cardan_shaft/center_shaft")
+    val DCS_SIDE_SHAFT: PartialModel = block("double_cardan_shaft/side_shaft")
+    val DCS_SIDE_GRIP: PartialModel = block("double_cardan_shaft/side_grip")
+    val DCS_GIMBAL: PartialModel = block("double_cardan_shaft/gimbal")
 
     private fun block(path: String): PartialModel { //copied from Create source code
         return PartialModel(Cogglewoggle.asResource("block/$path"))

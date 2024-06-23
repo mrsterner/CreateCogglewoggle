@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "create:shaft"
+      },
+      {
+        "item": "coggle:coaxial_gear"
+      }
+    ],
+    "result": {
+      "item": "create:cogwheel"
+    }
+  }

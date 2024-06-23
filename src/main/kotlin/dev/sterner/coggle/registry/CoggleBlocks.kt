@@ -1,7 +1,6 @@
 package dev.sterner.coggle.registry
 
 import com.simibubi.create.AllBlocks
-import com.simibubi.create.Create
 import com.simibubi.create.content.kinetics.simpleRelays.BracketedKineticBlockModel
 import com.simibubi.create.content.kinetics.simpleRelays.CogWheelBlock
 import com.simibubi.create.content.kinetics.simpleRelays.CogwheelBlockItem
@@ -108,4 +107,17 @@ object CoggleBlocks {
         }
         .transform(customItemModel())
         .register()
+
+    val DOUBLE_CARDAN_SHAFT: BlockEntry<DoubleCardanShaftBlock> =
+        REGISTRATE.block<DoubleCardanShaftBlock>("double_cardan_shaft") { p -> DoubleCardanShaftBlock(p!!) }
+            .initialProperties(AllBlocks.SHAFT)
+            .properties { p ->
+                p
+                    .mapColor(MapColor.METAL)
+                    .noOcclusion()
+            }.transform(TagGen.pickaxeOnly())
+            .item()
+            .transform(customItemModel())
+            .register()
+
 }

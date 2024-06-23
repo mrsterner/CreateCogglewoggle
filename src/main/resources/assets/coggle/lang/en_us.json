@@ -2,5 +2,42 @@
   "itemGroup.coggle": "Create: Coggle",
   "block.coggle.coaxial_gear": "Coaxial Gear",
   "block.coggle.differential": "Differential",
-  "block.coggle.planetary_gearset": "Planetary Gearset"
+  "block.coggle.planetary_gearset": "Planetary Gearset",
+  "block.coggle.double_cardan_shaft": "Double Cardan Shaft",
+
+  "coggle.ponder.tag.coggle": "Coggle Machines",
+  "coggle.ponder.tag.coggle.description": "Components and Curiosities added by Coggle",
+
+  "coggle.ponder.coaxial_gear_shaftless.header": "Using Coaxial Cogwheels as shaftless Cogwheels",
+  "coggle.ponder.coaxial_gear_shaftless.text_1": "Coaxial Cogwheels connect similarly to regular Cogwheels.",
+  "coggle.ponder.coaxial_gear_shaftless.text_2": "However, they have no Shaft, allowing for configurations that would be impossible with regular Cogwheels.",
+  "coggle.ponder.coaxial_gear_through.header": "Rotating Shafts through Coaxial Cogwheels",
+  "coggle.ponder.coaxial_gear_through.text_1": "Use a Coaxial Cogwheel on a Shaft to surround it.",
+  "coggle.ponder.coaxial_gear_through.text_2": "You can also use a Shaft on a Coaxial Cogwheel.",
+  "coggle.ponder.coaxial_gear_through.text_3": "In either case, there must be at least two Shaft blocks.",
+  "coggle.ponder.coaxial_gear_through.text_4": "The Shaft rotates completely independently of the Coaxial Cogwheel.",
+  "coggle.ponder.coaxial_gear_through.text_5": "They can even rotate at different speeds and in different directions.",
+
+
+  "coggle.ponder.differential.header": "Adding speeds with the Differential",
+  "coggle.ponder.differential.text_1": "Differentials rotate at the average speed of the two input Shafts.",
+  "coggle.ponder.differential.text_2": "When connected to a small Cog, this is effectively summing the two speeds.",
+  "coggle.ponder.differential.text_3": "16 RPM",
+  "coggle.ponder.differential.text_4": "+ 6 RPM",
+  "coggle.ponder.differential.text_5": "= 22 RPM",
+  "coggle.ponder.differential.text_6": "Shafts spinning in the opposite direction are treated like negative numbers.",
+  "coggle.ponder.differential.text_7": "16 RPM",
+  "coggle.ponder.differential.text_8": "- 6 RPM",
+  "coggle.ponder.differential.text_9": "= 10 RPM",
+  "coggle.ponder.differential.text_10": "While connected to two Shafts, the Differential only transfers the stress to the large Cogwheel through one.",
+  "coggle.ponder.differential.text_11": "The lit-up side transfers stress.",
+  "coggle.ponder.differential.text_12": "The other side does not.",
+  "coggle.ponder.differential.text_13": "If the outer gear is powered, the Differential will break.",
+  "coggle.ponder.double_cardan_shaft.header": "Relaying rotational force with Double Cardan Shafts",
+  "coggle.ponder.double_cardan_shaft.text_1": "Using two mechanisms called 'universal joints', Double Cardan Shafts can relay rotatation around a corner.",
+  "coggle.ponder.double_cardan_shaft.text_2": "Use a Wrench to rotate them around the axis you clicked.",
+
+  "coggle.ponder.planetary_gearset.header": "Out-of-this-world gearing with the Planetary Gearset",
+  "coggle.ponder.planetary_gearset.text_1": "Planetary Gearsets connect almost identically to Large Cogwheels (press Q to learn more about these).",
+  "coggle.ponder.planetary_gearset.text_2": "However, the Shaft of a Planetary Gearset rotates twice as fast, and in the opposite direction to the teeth."
 }
