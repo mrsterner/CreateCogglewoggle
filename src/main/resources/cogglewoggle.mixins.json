@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.example.modid.mixin",
+  "package": "dev.sterner.cogglewoggle.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "RotationPropagatorAccessor"
   ],
   "client": [
-    "MinecraftMixin"
   ],
   "injectors": {
     "defaultRequire": 1
