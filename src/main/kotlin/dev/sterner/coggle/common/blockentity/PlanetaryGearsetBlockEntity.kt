@@ -3,7 +3,9 @@ package dev.sterner.coggle.common.blockentity
 import com.simibubi.create.content.kinetics.base.IRotate
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity
 import com.simibubi.create.content.kinetics.transmission.SplitShaftBlockEntity
+import com.simibubi.create.foundation.block.IBE
 import dev.sterner.coggle.mixin.RotationPropagatorAccessor
+import dev.sterner.coggle.registry.CoggleBlockEntityTypes
 import dev.sterner.coggle.registry.CoggleBlocks
 import dev.sterner.coggle.util.KineticsHelper.addLargeCogwheelPropagationLocations
 import dev.sterner.coggle.util.KineticsHelper.directionBetween
@@ -13,8 +15,9 @@ import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
 import kotlin.math.sign
 
-class PlanetaryGearsetBlockEntity(typeIn: BlockEntityType<*>?, pos: BlockPos?, state: BlockState?) :
+class PlanetaryGearsetBlockEntity(typeIn: BlockEntityType<PlanetaryGearsetBlockEntity>, pos: BlockPos?, state: BlockState?) :
     SplitShaftBlockEntity(typeIn, pos, state) {
+
     override fun propagateRotationTo(
         target: KineticBlockEntity,
         stateFrom: BlockState,
@@ -55,4 +58,4 @@ class PlanetaryGearsetBlockEntity(typeIn: BlockEntityType<*>?, pos: BlockPos?, s
     override fun canPropagateDiagonally(block: IRotate, state: BlockState): Boolean {
         return true
     }
-};
+}

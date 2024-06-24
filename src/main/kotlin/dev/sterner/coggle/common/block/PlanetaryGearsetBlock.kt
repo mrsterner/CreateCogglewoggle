@@ -18,6 +18,7 @@ import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.VoxelShape
 
 class PlanetaryGearsetBlock(properties: Properties?) : CogWheelBlock(true, properties) {
+
     init {
         registerDefaultState(defaultBlockState().setValue(SUPPORT_ONLY, false))
     }

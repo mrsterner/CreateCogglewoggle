@@ -6,8 +6,10 @@ import com.simibubi.create.content.kinetics.base.KineticBlock
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity
 import com.simibubi.create.content.kinetics.base.RotatedPillarKineticBlock
 import com.simibubi.create.content.kinetics.transmission.SplitShaftBlockEntity
+import com.simibubi.create.foundation.block.IBE
 import dev.sterner.coggle.common.block.DirectionalRotatedPillarKineticBlock
 import dev.sterner.coggle.mixin.RotationPropagatorAccessor
+import dev.sterner.coggle.registry.CoggleBlockEntityTypes
 import dev.sterner.coggle.registry.CoggleBlocks
 import dev.sterner.coggle.util.KineticsHelper.addLargeCogwheelPropagationLocations
 import dev.sterner.coggle.util.KineticsHelper.directionBetween
@@ -17,7 +19,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType
 import net.minecraft.world.level.block.state.BlockState
 import kotlin.math.sign
 
-class DifferentialBlockEntity(type: BlockEntityType<*>?, pos: BlockPos?, state: BlockState?) :
+class DifferentialBlockEntity(type: BlockEntityType<DifferentialBlockEntity>, pos: BlockPos?, state: BlockState?) :
     SplitShaftBlockEntity(type, pos, state) {
     var oldControlSpeed: Float = 0f
 

@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.BlockState
 
 
 class DummyDifferentialBlock(properties: Properties?) : DirectionalRotatedPillarKineticBlock(properties) {
+
     @Deprecated("")
     override fun onPlace(state: BlockState, level: Level, pos: BlockPos, oldState: BlockState, isMoving: Boolean) {
         level.scheduleTick(pos, CoggleBlocks.DUMMY_DIFFERENTIAL.get(), 2)

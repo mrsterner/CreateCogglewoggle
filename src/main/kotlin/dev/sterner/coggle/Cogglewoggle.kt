@@ -7,6 +7,7 @@ import dev.sterner.coggle.registry.CoggleBlocks
 import dev.sterner.coggle.registry.CoggleItems
 import dev.sterner.coggle.registry.CogglePonderTags
 import dev.sterner.coggle.util.CogglePartials
+import dev.sterner.coggle.util.CoggleShapes
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.api.ModInitializer
 import net.minecraft.core.Registry
@@ -26,6 +27,7 @@ object Cogglewoggle : ModInitializer, ClientModInitializer {
         ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation("coggle"))
 
     override fun onInitialize() {
+        CoggleShapes.init()
         CoggleBlocks.init()
         CoggleBlockEntityTypes.init()
         CoggleItems.init()
@@ -39,7 +41,8 @@ object Cogglewoggle : ModInitializer, ClientModInitializer {
     }
 
     override fun onInitializeClient() {
-        CogglePartials.init();
+
+        CogglePartials.init()
         CogglePonderTags.register()
         CogglePonderIndex.register()
     }

@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockState
 
 class CoaxialGearBlockEntity(type: BlockEntityType<*>?, pos: BlockPos?, state: BlockState?) :
     BracketedKineticBlockEntity(type, pos, state) {
+
     override fun propagateRotationTo(
         target: KineticBlockEntity,
         stateFrom: BlockState,

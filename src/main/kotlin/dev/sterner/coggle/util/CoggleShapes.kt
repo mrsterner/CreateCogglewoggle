@@ -17,5 +17,9 @@ object CoggleShapes {
 
     private fun shape(x1: Double, y1: Double, z1: Double, x2: Double, y2: Double, z2: Double): AllShapes.Builder {
         return AllShapes.Builder(Block.box(x1, y1, z1, x2, y2, z2))
-    };
+    }
+
+    fun init() {
+
+    }
 }

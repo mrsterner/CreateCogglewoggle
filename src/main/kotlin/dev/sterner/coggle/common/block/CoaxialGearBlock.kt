@@ -31,6 +31,7 @@ import net.minecraft.world.phys.shapes.VoxelShape
 
 
 class CoaxialGearBlock(properties: Properties?) : CogWheelBlock(false, properties) {
+
     init {
         registerDefaultState(defaultBlockState().setValue(HAS_SHAFT, false))
     }

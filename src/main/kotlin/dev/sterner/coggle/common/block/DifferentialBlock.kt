@@ -2,6 +2,7 @@ package dev.sterner.coggle.common.block
 
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity
 import com.simibubi.create.content.kinetics.simpleRelays.CogWheelBlock
+import com.simibubi.create.content.kinetics.transmission.GearshiftBlock
 import dev.sterner.coggle.common.blockentity.DifferentialBlockEntity
 import dev.sterner.coggle.registry.CoggleBlockEntityTypes
 import dev.sterner.coggle.registry.CoggleBlocks
@@ -26,7 +27,9 @@ import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.Shapes
 import net.minecraft.world.phys.shapes.VoxelShape
 
-class DifferentialBlock(properties: Properties) : CogWheelBlock(true, properties), NeighborChangeListeningBlock {
+class DifferentialBlock(properties: Properties) : CogWheelBlock(true, properties),
+    NeighborChangeListeningBlock
+{
 
     companion object {
         val FULL_MODEL: BooleanProperty = BooleanProperty.create("full_model")

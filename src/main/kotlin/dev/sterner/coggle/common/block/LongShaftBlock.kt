@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.state.StateDefinition
 
 
 class LongShaftBlock(properties: Properties?) : ShaftBlock(properties), ITransformableBlock {
+
     init {
         registerDefaultState(
             defaultBlockState().setValue<Boolean, Boolean>(

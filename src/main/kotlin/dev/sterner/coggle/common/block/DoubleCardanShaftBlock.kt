@@ -28,6 +28,7 @@ import kotlin.collections.toTypedArray
 
 class DoubleCardanShaftBlock(properties: Properties?) : DirectionalAxisKineticBlock(properties),
     IBE<DoubleCardanShaftBlockEntity> {
+
     override fun getStateForPlacement(context: BlockPlaceContext): BlockState {
         val direction1 = context.clickedFace.opposite
         val direction2 = if (direction1.axis === Direction.Axis.Y) {

@@ -4,7 +4,9 @@ import com.simibubi.create.content.kinetics.simpleRelays.BracketedKineticBlockEn
 import com.simibubi.create.content.kinetics.simpleRelays.BracketedKineticBlockEntityRenderer
 import com.tterrag.registrate.util.entry.BlockEntityEntry
 import com.tterrag.registrate.util.nullness.NonNullFunction
+import com.tterrag.registrate.util.nullness.NonNullSupplier
 import dev.sterner.coggle.Cogglewoggle.REGISTRATE
+import dev.sterner.coggle.client.renderer.CoaxalGearBlockEntityRenderer
 import dev.sterner.coggle.client.renderer.DifferentialRenderer
 import dev.sterner.coggle.client.renderer.DoubleCardanShaftRenderer
 import dev.sterner.coggle.client.renderer.PlanetaryGearsetRenderer
@@ -30,6 +32,8 @@ object CoggleBlockEntityTypes {
                 type!!, pos!!, state!!
             )
         }
+        .instance({ BiFunction { materialManager, blockEntity -> BracketedKineticBlockEntityInstance(materialManager, blockEntity) } }, false)
+
         .validBlocks(CoggleBlocks.COAXIAL_GEAR)
         .renderer {
             NonNullFunction<BlockEntityRendererProvider.Context?, BlockEntityRenderer<in CoaxialGearBlockEntity?>> { context: BlockEntityRendererProvider.Context? ->
@@ -49,6 +53,7 @@ object CoggleBlockEntityTypes {
                 type!!, pos!!, state!!
             )
         }
+        .instance({ BiFunction { materialManager, blockEntity -> BracketedKineticBlockEntityInstance(materialManager, blockEntity) } }, false)
         .validBlocks(CoggleBlocks.LONG_SHAFT)
         .renderer {
             NonNullFunction<BlockEntityRendererProvider.Context?, BlockEntityRenderer<in LongShaftBlockEntity?>> { context: BlockEntityRendererProvider.Context? ->
@@ -64,7 +69,7 @@ object CoggleBlockEntityTypes {
         .blockEntity<DifferentialBlockEntity>(
             "differential"
         ) { type, pos, state ->
-            DifferentialBlockEntity(type!!, pos!!, state!!)
+            DifferentialBlockEntity(type, pos!!, state!!)
         }
         .validBlock(CoggleBlocks.DIFFERENTIAL)
         .renderer {

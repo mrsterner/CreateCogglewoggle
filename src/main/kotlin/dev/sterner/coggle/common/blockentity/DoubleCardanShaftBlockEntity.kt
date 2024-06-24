@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.state.BlockState
 
 class DoubleCardanShaftBlockEntity(type: BlockEntityType<*>?, pos: BlockPos?, state: BlockState?) :
     SplitShaftBlockEntity(type, pos, state) {
+
     override fun getRotationSpeedModifier(face: Direction): Float {
         if (hasSource()) {
             if (face == sourceFacing) return 1f
